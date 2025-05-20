@@ -10,7 +10,7 @@
         "project2": {
             "name": "Multiphone",
             "description": "Sistema que permite realizar llamadas y recargas internacionales, desde cualquier parte del mundo",
-            "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS"],
+            "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS", "Adobe XD"],
             "image": "./../images/multiphone.webp",
             "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
         },
@@ -21,5 +21,9 @@
             "image": "./../images/multiphone.webp",
             "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
         }
-    }
+    },
+    "profile": {
+        "name": "Sergio",
+        "lastName": "Betancourt",
+        "email": "sbetancourt776@gmail.com"
 }
