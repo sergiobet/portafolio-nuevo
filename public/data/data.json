@@ -2,28 +2,32 @@
     "projects": {
         "project1": {
             "name": "Htmlcenter",
-            "description": "Es un sistema de análisis de datos deportivos que permite a los usuarios visualizar y analizar datos de diferentes deportes.",
+            "description": "Sistema de análisis de datos deportivos",
             "technologies": ["JavaScript", "webpack", "jQuery", "Bootstrap", "Sass", "SEO"],
-            "image": "./../images/htmlcenter.webp",
+            "image": "./../images/projects/htmlcenter.webp",
             "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
         },
         "project2": {
             "name": "Multiphone",
-            "description": "Sistema que permite realizar llamadas y recargas internacionales, desde cualquier parte del mundo",
+            "description": "Sistema de llamadas y recargas internacionales",
             "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS", "Adobe XD"],
-            "image": "./../images/multiphone.webp",
-            "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
+            "image": "./../images/projects/multiphone.webp",
+            "url": "https://web.multiphone.net/"
         },
         "project3": {
-            "name": "Sistema de gestión de compras y ventas",
-            "description": "Sistema que permite llevar un control de las compras y ventas de un establecimiento, generando reportes y gráficas",
-            "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS"],
-            "image": "./../images/multiphone.webp",
+            "name": "SGCV",
+            "description": "Sistema de gestión de compras y ventas",
+            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "image": "./../images/projects/multiphone.webp",
             "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
         }
     },
     "profile": {
         "name": "Sergio",
         "lastName": "Betancourt",
-        "email": "sbetancourt776@gmail.com"
+        "email": "sbetancourt776@gmail.com",
+        "avatar": "./../images/avatar/avatar-1.webp",
+        "experience": "Desarrollador Web Semi-Senior",
+        "description": "Con más de 6 años de experiencia y conocimientos en el área de backend y frontend"
+    }
 }

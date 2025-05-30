@@ -50,7 +50,7 @@ function App() {
   return (
     <> 
     <MenuComponent></MenuComponent>
-      <main className="bg-gray-100 dark:bg-gray-900 min-h-screen">
+      <main>
         <Profile data={data}></Profile>
         <br></br>
         <Projects data={data}></Projects>
