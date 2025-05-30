@@ -1,8 +1,10 @@
-function Projects({ data }: { data: ProjectsData | null }) {
+import type { PortfolioData } from "../App";
+
+function Projects({ data }: { data: PortfolioData | null }) {
 
   return (
 
-    <div className="Cards">
+    <div className="Cards flex items-center gap-4 p-4 bg-white shadow-md rounded-lg">
       <h1 className="text-4xl font-semibold uppercase mb-5">Proyectos</h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
         {data?.projects ? (

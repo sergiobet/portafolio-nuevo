@@ -1,28 +1,42 @@
 import "./App.css";
 import Projects from "./components/Projects";
+import Profile from "./components/Profile";
+import MenuComponent from "./components/MenuComponent";
 import { useEffect, useState } from "react";
 
-function App() {
-  const [data, setData] = useState<ProjectsData | null>(null);
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  tags: string[];
+}
 
-   interface Project {
-    id: number;
-    title: string 
-    description: string;
-    image: string;
-    url: string;
-    tags: string[];
-  }
-  interface ProjectsData {
-    projects: Project[];
-  }
+export interface ProfileData {
+  name: string;
+  lastName: string;
+  email: string;
+  avatar: string;
+  experience: string;
+  description: string;
+}
+
+export interface PortfolioData {
+  projects: Project[];
+  profile: ProfileData[];
+}
+
+function App() {
+
+  const [data, setData] = useState<PortfolioData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("./data/data.json");
         if (!response.ok) throw new Error("Error al cargar los datos");
-        const jsonData: ProjectsData = await response.json();
+        const jsonData: PortfolioData = await response.json();
         setData(jsonData);
       } catch (error) {
         console.error(error);
@@ -30,11 +44,18 @@ function App() {
     };
 
     fetchData();
+
   }, []);
 
   return (
-    <>
-      <Projects data={data}></Projects>
+    <> 
+    <MenuComponent></MenuComponent>
+      <main className="bg-gray-100 dark:bg-gray-900 min-h-screen">
+        <Profile data={data}></Profile>
+        <br></br>
+        <Projects data={data}></Projects>
+      </main>
+
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
