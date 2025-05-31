@@ -72,8 +72,9 @@ function MenuComponent() {
   }, [darkMode]);
 
   return (
-    <Disclosure as="nav" className=" top-0 z-50 w-full sticky">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 lg:pl-5">
+    
+    <Disclosure as="nav" className=" top-0 z-50 w-full fixed bg-opacity-100 left-0 bg-white dark:bg-[#121212]">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -90,7 +91,7 @@ function MenuComponent() {
               />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-between sm:items-stretch">
+          <div className="flex flex-1 items-center justify-around sm:items-stretch md:justify-between">
             <div className="flex shrink-0 items-center text-2xl relative">SB.</div>
             <div className="hidden sm:ml-6 sm:block relative">
               <div className="flex space-x-4">
@@ -102,7 +103,7 @@ function MenuComponent() {
                     className={classNames(
                       active === item.href
                         ? "text-gray"
-                        : "text-gray-500  hover:text-gray-900",
+                        : "text-gray-500 hover:text-black dark:hover:text-white",
                       "rounded-md px-3 py-2 text-md font-medium"
                     )}
                   >

@@ -16,7 +16,7 @@ function Profile({ data }: { data: PortfolioData | null }) {
 
   return (
     <section id="home">
-      <div className="flex items-center gap-4 p-4 h-screen w-full">
+      <div className="flex items-center gap-4 h-screen w-full">
         <div className="w-full">
           <h1 className="text-4xl md:text-5xl font-semibold text-left my-4">
             {fullName}
