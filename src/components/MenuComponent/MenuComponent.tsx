@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 //opciones para el menú de navegación
 const navigation = [
-  { name: "Home", href: "#home" },
+  { name: "Inicio", href: "#home" },
   { name: "Proyectos", href: "#proyectos" },
   { name: "Sobre mí", href: "#sobremi" },
   { name: "Contacto", href: "#contacto" },
@@ -24,7 +24,6 @@ const classNames = (...classes: (string | undefined | false | null)[]) => {
 };
 
 const activeMenuItem = () => {
-
   const items = Array.from(document.querySelectorAll("nav a"));
   const handleClick = (el: Event) => {
     const target = el.target as HTMLElement | null;
@@ -72,8 +71,10 @@ function MenuComponent() {
   }, [darkMode]);
 
   return (
-    
-    <Disclosure as="nav" className=" top-0 z-50 w-full fixed bg-opacity-100 left-0 bg-white dark:bg-[#121212]">
+    <Disclosure
+      as="nav"
+      className=" top-0 z-50 w-full fixed bg-opacity-100 left-0 bg-white dark:bg-[#121212]"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -92,7 +93,25 @@ function MenuComponent() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-around sm:items-stretch md:justify-between">
-            <div className="flex shrink-0 items-center text-2xl relative">SB.</div>
+            <div className="flex shrink-0 items-center text-2xl relative">
+              {darkMode ?
+                    <img
+                src="./../../public/logos/logo-white.webp"
+                alt="Logo"
+                height="30"
+                width="30"
+              />
+              : 
+                <img
+                src="./../../public/logos/logo-dark.webp"
+                alt="Logo"
+                height="30"
+                width="30"
+              />  
+              }
+              
+            
+            </div>
             <div className="hidden sm:ml-6 sm:block relative">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
@@ -116,7 +135,7 @@ function MenuComponent() {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2"
+              className="p-2 cursor-pointer"
               aria-label="cambiar a tema claro/oscuro"
             >
               {darkMode ? (
@@ -180,13 +199,7 @@ function MenuComponent() {
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? "page" : undefined}
-              className={classNames(
-                item.current
-                  ? "bg-gray-900 text-gray"
-                  : "text-gray-400 hover:bg-gray-700 hover:text-white",
-                "block rounded-md px-3 py-2 text-base font-medium"
-              )}
+              className="text-gray-400 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
               {item.name}
             </DisclosureButton>

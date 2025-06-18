@@ -1,8 +1,10 @@
 import "./App.css";
-import Projects from "./components/Projects";
-import Profile from "./components/Profile";
-import MenuComponent from "./components/MenuComponent";
+import Projects from "./components/Projects/Projects";
+import Profile from "./components/Profile/Profile";
+import MenuComponent from "./components/MenuComponent/MenuComponent";
+import SocialIcons from "./components/SocialIcons/SocialIcons";
 import { useEffect, useState } from "react";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 export interface Project {
   id: number;
@@ -38,6 +40,7 @@ function App() {
         if (!response.ok) throw new Error("Error al cargar los datos");
         const jsonData: PortfolioData = await response.json();
         setData(jsonData);
+        
       } catch (error) {
         console.error(error);
       }
@@ -50,10 +53,13 @@ function App() {
   return (
     <> 
     <MenuComponent></MenuComponent>
+    
       <main>
+        <SocialIcons></SocialIcons>
         <Profile data={data}></Profile>
         <br></br>
         <Projects data={data}></Projects>
+        <ContactForm></ContactForm>
       </main>
 
       {/* <div>
