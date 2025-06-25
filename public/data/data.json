@@ -11,7 +11,7 @@
             "title": "Multiphone",
             "description": "Sistema que ofrece los servicios de realizar llamadas y recargas internacionales, permite a los usuarios realizar llamadas a diferentes países y recargar sus teléfonos móviles de manera sencilla y rápida.",
             "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS", "Adobe XD"],
-            "image": "./../images/projects/multiphone.webp",
+            "image": "./../images/projects/mp.webp",
             "url": "https://web.multiphone.net/"
         },
         "project3": {
@@ -33,6 +33,13 @@
             "description": "Landing page para OPB Capital Group, una empresa de servicios financieros que ofrece soluciones de inversión y asesoría financiera.",
             "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
             "image": "./../images/projects/opbcg.webp",
+            "url": "https://www.opbcapitalgroup.com/"
+        },
+        "project6": {
+            "title": "Website 107 Steak and Bar",
+            "description": "Sitoi web del estilo steakhouse, 107 Steak and Bar, que ofrece una experiencia gastronómica única con una variedad de cortes de carne y platos gourmet. Además cuenta con una funcionalidad de reservas en línea.",
+            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "image": "./../images/projects/107.webp",
             "url": "https://www.opbcapitalgroup.com/"
         }
     },

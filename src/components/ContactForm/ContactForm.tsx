@@ -5,11 +5,14 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   ArrowRightIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 function ContactForm() {
-  const form = useRef();
-  const sendEmail = (e) => {
+  const form = useRef<HTMLFormElement>(null);
+  const [alertVisible, setAlertVisible] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
@@ -18,31 +21,22 @@ function ContactForm() {
       })
       .then(
         () => {
-          showAlert();
+          setAlertVisible(true);
           // Reset the form after successful submission
-          e.target.reset();
+          (e.target as HTMLFormElement).reset();
         },
-        (error) => {
-          console.log("FAILED...", error.text);
+        (error: unknown) => {
+          if (typeof error === "object" && error !== null && "text" in error) {
+            console.log("FAILED...", error.text);
+          } else {
+            console.log("FAILED...", error);
+          }
         }
       );
   };
 
-  const alert = document.getElementById(
-    "alert-send-message"
-  ) as HTMLElement | null;
   // Función para cerrar la alerta de mensaje enviado en el formulario de contacto
-  const closeAlert = () => {
-    if (alert) {
-      alert.style.display = "none";
-    }
-  };
-  // Función para mostrar la alerta de mensaje enviado con éxito en el formulario de contacto
-  const showAlert = () => {
-    if (alert) {
-      alert.style.display = "flex";
-    }
-  };
+  const closeAlert = () => setAlertVisible(false);
 
   return (
     <section
@@ -50,49 +44,6 @@ function ContactForm() {
       id="contacto"
     >
       <div className="container mx-auto">
-        <div
-          id="alert-send-message"
-          className="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 hidden"
-          role="alert"
-        >
-          <svg
-            className="shrink-0 w-4 h-4"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-          </svg>
-          <span className="sr-only">Info</span>
-          <div className="ms-3 text-sm font-medium">
-            Mensaje enviado correctamente.
-          </div>
-          <button
-            type="button"
-            className="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
-            data-dismiss-target="#alert-3"
-            aria-label="Close"
-            onClick={closeAlert}
-          >
-            <span className="sr-only">Close</span>
-            <svg
-              className="w-3 h-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-              />
-            </svg>
-          </button>
-        </div>
         <div className="-mx-4 flex flex-wrap lg:justify-around">
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0 text-left">
@@ -145,7 +96,7 @@ function ContactForm() {
           </div>
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div className="relative rounded-lg p-8 shadow-lg sm:p-12 dark:bg-gray-900 bg-white">
-              <form ref={form} onSubmit={sendEmail} novalidate>
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-6">
                   <input
                     type="text"
@@ -154,7 +105,7 @@ function ContactForm() {
                     className="w-full rounded-lg border border-stroke px-[14px] py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
                     required
                   />
-                  <span className="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                  <span className="mt-2 hidden text-sm">
                     Please enter a valid email address
                   </span>
                 </div>
@@ -174,7 +125,6 @@ function ContactForm() {
                     placeholder="Teléfono"
                     className="w-full rounded-lg border border-stroke px-[14px] py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
                     required
-                    pattern="[0-9]"
                     title="No puede estar vacío, solo se aceptan números y debe tener el formato 58 4143003080"
                   />
                 </div>
@@ -190,12 +140,27 @@ function ContactForm() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full rounded-lg border border-primary p-3 text-dark transition hover:bg-primary/90 cursor-pointer hover:bg-gray-900 hover:text-white dark:border-primary dark:text-white dark:hover:bg-primary dark:hover:text-gray-900 dark:hover:bg-white inline-flex justify-center lineheight-6 group-invalid:pointer-events-none group-invalid:opacity-30"
+                    className="w-full rounded-lg border border-primary p-3 text-dark transition hover:bg-primary/90 cursor-pointer hover:bg-gray-900 hover:text-white dark:border-primary dark:text-white dark:hover:bg-primary dark:hover:text-gray-900 dark:hover:bg-white inline-flex justify-center lineheight-6"
                   >
                     Enviar
                     <ArrowRightIcon className="h-5 w-4 ml-1" />
                   </button>
                 </div>
+                <br />
+                {alertVisible && (
+                  <div
+                    id="alert-send-message"
+                    className="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 justify-between"
+                    role="alert"
+                  >
+                    <span className="ms-3 text-sm font-medium">
+                      Mensaje enviado correctamente.
+                    </span>
+                    <button onClick={closeAlert} type="button" className="cursor-pointer">
+                      <XMarkIcon className="h-5 w-5 ms-auto" />
+                    </button>
+                  </div>
+                )}
               </form>
               <div>
                 <span className="absolute -right-9 -top-10 z-[-1]">
