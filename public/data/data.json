@@ -10,35 +10,35 @@
         "project2": {
             "title": "Multiphone",
             "description": "Sistema que ofrece los servicios de realizar llamadas y recargas internacionales, permite a los usuarios realizar llamadas a diferentes países y recargar sus teléfonos móviles de manera sencilla y rápida.",
-            "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS", "Adobe XD"],
+            "technologies": ["jQuery", "Web Design", "Bootstrap", "JavaScript", "CSS", "PHP", "SEO"],
             "image": "./../images/projects/mp.webp",
             "url": "https://web.multiphone.net/"
         },
         "project3": {
             "title": "SGCV (Proyecto local)",
             "description": "Sistema de gestión de compras y venta de productos, permite a los usuarios llevar un control de sus compras y ventas de manera sencilla y rápida, con funcionalidades como la gestión de inventario, pedidos y facturación.",
-            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP", "CSS", "webpack"],
             "image": "./../images/projects/sgcv.webp",
             "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
         },
         "project4": {
             "title": "Calculadora básica",
             "description": "Calculadora básica que permite realizar operaciones matemáticas simples como suma, resta, multiplicación y división.",
-            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "technologies": ["Bootstrap", "React", "CSS", "JavaScript"],
             "image": "./../images/projects/calculadora.webp",
             "url": "https://calculadora-five-virid.vercel.app/"
         },
         "project5": {
             "title": "Landing Page OPBCG",
             "description": "Landing page para OPB Capital Group, una empresa de servicios financieros que ofrece soluciones de inversión y asesoría financiera.",
-            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "technologies": ["Bootstrap", "WordPress", "JavaScript", "jQuery", "CSS", "Web Design"],
             "image": "./../images/projects/opbcg.webp",
             "url": "https://www.opbcapitalgroup.com/"
         },
         "project6": {
             "title": "Website 107 Steak and Bar",
-            "description": "Sitoi web del estilo steakhouse, 107 Steak and Bar, que ofrece una experiencia gastronómica única con una variedad de cortes de carne y platos gourmet. Además cuenta con una funcionalidad de reservas en línea.",
-            "technologies": ["Bootstrap", "Vue.js", "Laravel", "MySQL", "JavaScript", "PHP"],
+            "description": "Sitoi web del estilo steakhouse, 107 Steak and Bar, que ofrece una experiencia gastronómica única. Además cuenta con una funcionalidad de reservas en línea.",
+            "technologies": ["Bootstrap","WordPress", "jQuery", "JavaScript", "CSS", "OpenTable", "Web Design"],
             "image": "./../images/projects/107.webp",
             "url": "https://www.opbcapitalgroup.com/"
         }
@@ -47,7 +47,7 @@
         "name": "Sergio",
         "lastName": "Betancourt",
         "email": "sbetancourt776@gmail.com",
-        "avatar": "./../images/avatar/avatar-1.webp",
+        "avatar": "./../images/avatar/avatar-2.webp",
         "experience": "Desarrollador Web Semi-Senior",
         "description": "Con más de 6 años de experiencia y conocimientos en el área de backend y frontend"
     }

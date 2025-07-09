@@ -4,7 +4,6 @@ import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
   MapPinIcon,
-  ArrowRightIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
@@ -43,13 +42,11 @@ function ContactForm() {
       className="relative z-10 overflow-hidden py-20 lg:py-[120px]"
       id="contacto"
     >
+      <h1 className="text-left text-4xl font-semibold">Datos de contacto</h1>
       <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap lg:justify-around">
+        <div className="flex flex-wrap lg:justify-around">
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0 text-left">
-              <h1 className="mb-6 text-dark text-4xl font-semibold dark:text-white">
-                Datos de contacto
-              </h1>
               <br />
               <br />
               <div className="mb-8 flex w-full max-w-[370px]">
@@ -57,9 +54,6 @@ function ContactForm() {
                   <DevicePhoneMobileIcon className="h-10 w-10" />
                 </div>
                 <div className="w-full">
-                  {/* <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
-                    Número telefónico
-                  </h4> */}
                   <p className="text-base text-body-color dark:text-dark-6 mt-5">
                     +58 414 3003030
                   </p>
@@ -71,9 +65,6 @@ function ContactForm() {
                   <EnvelopeIcon className="h-10 w-10" />
                 </div>
                 <div className="w-full">
-                  {/* <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
-                    Correo electrónico
-                  </h4> */}
                   <p className="text-base text-body-color dark:text-dark-6 mt-5">
                     sbetancourt776@gmail.com
                   </p>
@@ -84,9 +75,6 @@ function ContactForm() {
                   <MapPinIcon className="h-10 w-10" />
                 </div>
                 <div className="w-full">
-                  {/* <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
-                    Correo electrónico
-                  </h4> */}
                   <p className="text-base text-body-color dark:text-dark-6 mt-5">
                     Caracas, Venezuela
                   </p>
@@ -94,7 +82,7 @@ function ContactForm() {
               </div>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+          <div className="w-full lg:w-1/2 xl:w-5/12">
             <div className="relative rounded-lg p-8 shadow-lg sm:p-12 dark:bg-gray-900 bg-white">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-6">
@@ -143,7 +131,6 @@ function ContactForm() {
                     className="w-full rounded-lg border border-primary p-3 text-dark transition hover:bg-primary/90 cursor-pointer hover:bg-gray-900 hover:text-white dark:border-primary dark:text-white dark:hover:bg-primary dark:hover:text-gray-900 dark:hover:bg-white inline-flex justify-center lineheight-6"
                   >
                     Enviar
-                    <ArrowRightIcon className="h-5 w-4 ml-1" />
                   </button>
                 </div>
                 <br />
@@ -156,7 +143,11 @@ function ContactForm() {
                     <span className="ms-3 text-sm font-medium">
                       Mensaje enviado correctamente.
                     </span>
-                    <button onClick={closeAlert} type="button" className="cursor-pointer">
+                    <button
+                      onClick={closeAlert}
+                      type="button"
+                      className="cursor-pointer"
+                    >
                       <XMarkIcon className="h-5 w-5 ms-auto" />
                     </button>
                   </div>
