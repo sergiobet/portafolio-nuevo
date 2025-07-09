@@ -5,7 +5,8 @@ function DownloadCurriculum() {
     event.preventDefault();
     const link = document.createElement("a");
     link.href = "./cv/Sergio-Betancourt-CV.pdf"; // Ruta al archivo PDF
-    link.download = "Sergio-Betancourt-CV.pdf";
+    link.target = "_blank"; // Abrir en una nueva pestaña
+    link.rel = "noopener noreferrer"; // Seguridad adicional
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
