@@ -4,11 +4,12 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="flex justify-center space-x-2">
           <a
-          target="_blank"
+            target="_blank"
             href="https://www.linkedin.com/in/sergio-betancourt1/"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
             data-twe-ripple-init
+            aria-label="Perfil de LinkedIn"
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg
@@ -22,11 +23,12 @@ const Footer: React.FC = () => {
           </a>
 
           <a
-          target="_blank"
+            target="_blank"
             href="https://github.com/sergiobet"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
             data-twe-ripple-init
+            aria-label="Perfil de Github"
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg
@@ -40,7 +42,9 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="w-full dark:bg-gray-900 p-4 text-center">© 2017-2025 Copyright</div>
+      <div className="w-full dark:bg-gray-900 p-4 text-center">
+        © 2017-2025 Copyright
+      </div>
     </footer>
   );
 };
