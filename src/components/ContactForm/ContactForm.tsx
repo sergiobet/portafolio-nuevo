@@ -7,12 +7,14 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-function ContactForm() {
+const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
   const [alertVisible, setAlertVisible] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!form.current) return; // Evita llamar si el ref es null
 
     emailjs
       .sendForm("service_jc7l3kp", "template_72e2xv8", form.current, {
@@ -39,7 +41,7 @@ function ContactForm() {
 
   return (
     <section
-      className="relative z-10 overflow-hidden py-20 lg:py-[120px]"
+      className="relative z-10 overflow-hidden my-20"
       id="contacto"
     >
       <h1 className="text-left text-4xl font-semibold">Datos de contacto</h1>
@@ -118,7 +120,7 @@ function ContactForm() {
                 </div>
                 <div className="mb-6">
                   <textarea
-                    rows="6"
+                    rows={6}
                     name="message"
                     placeholder="Mensaje"
                     className="w-full resize-none rounded-lg border border-stroke px-[14px] py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
