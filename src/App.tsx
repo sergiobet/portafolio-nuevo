@@ -2,9 +2,10 @@ import "./App.css";
 import Projects from "./components/Projects/Projects";
 import Profile from "./components/Profile/Profile";
 import MenuComponent from "./components/MenuComponent/MenuComponent";
-import SocialIcons from "./components/SocialIcons/SocialIcons";
 import { useEffect, useState } from "react";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Skills from "./components/Skills/Skills";
+import Footer from "./components/Footer/Footer";
 
 export interface Project {
   id: number;
@@ -12,7 +13,7 @@ export interface Project {
   description: string;
   image: string;
   url: string;
-  tags: string[];
+  technologies: string[];
 }
 
 export interface ProfileData {
@@ -24,14 +25,22 @@ export interface ProfileData {
   description: string;
 }
 
+export interface SkillGroup {
+  title: string;
+  technologies: string[];
+}
+
 export interface PortfolioData {
   projects: Project[];
   profile: ProfileData[];
+  skills: SkillGroup[];
 }
 
 function App() {
 
   const [data, setData] = useState<PortfolioData | null>(null);
+  const [showContact, setShowContact] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,48 +49,37 @@ function App() {
         if (!response.ok) throw new Error("Error al cargar los datos");
         const jsonData: PortfolioData = await response.json();
         setData(jsonData);
-        
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchData();
-
   }, []);
 
-  return (
-    <> 
-    <MenuComponent></MenuComponent>
-    
-      <main>
-        <SocialIcons></SocialIcons>
-        <Profile data={data}></Profile>
-        <br></br>
-        <Projects data={data}></Projects>
-        <ContactForm></ContactForm>
-      </main>
+  // Este efecto espera a que data esté lista y luego muestra ContactForm
+  useEffect(() => {
+    if (data) {
+      setShowContact(true);
+      setShowFooter(true);
+    }
+  }, [data]);
 
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+  return (
+    <>
+      <MenuComponent></MenuComponent>
+
+      <main>
+        {data && <Profile data={data} />}
+        <br />
+        {data && <Skills data={data} />}
+        <br /><br />
+        {data && <Projects data={data} />}
+        {showContact && <ContactForm />}
+      </main>
+      <footer>
+        {showFooter &&<Footer />}
+      </footer>
     </>
   );
 }
