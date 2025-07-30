@@ -1,7 +1,7 @@
 import type { PortfolioData } from "../../App";
 import DownloadCurriculum from "../DownloadCurriculum/DownloadCurriculum";
 
-function Profile({ data }: { data: PortfolioData | null }) {
+const Profile = ({ data }: { data: PortfolioData | null }) => {
   if (!data) {
     return <div>Cargando perfil...</div>;
   }
@@ -11,7 +11,7 @@ function Profile({ data }: { data: PortfolioData | null }) {
 
   return (
     <section id="home">
-      <div className="items-center gap-4 h-screen w-full grid grid-cols-1 md:grid-cols-2">
+      <div className="items-center gap-4 h-dvh w-full grid grid-cols-1 md:grid-cols-2">
         <div className="w-full order-2 md:order-1">
           <h1 className="text-4xl md:text-5xl font-semibold text-left my-4">
             {fullName}
@@ -24,21 +24,14 @@ function Profile({ data }: { data: PortfolioData | null }) {
           </p>
           <div className="text-left">
             <DownloadCurriculum/>
-            {/* <button
-              type="button"
-              id="cv"
-              className="inline-flex text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:text-white! dark:border-gray-600 dark:hover:bg-gray-700! dark:hover:border-gray-600 cursor-pointer dark:text-white w-full mx-auto justify-center md:justify-start md:w-auto animate-pingOnce"
-              aria-label="Descargar CV"
-              onClick={alert.bind(null, "Enlace de descarga no disponible.")}
-            >
-              Descargar CV
-              <ArrowRightIcon className="h-5 w-4 ml-1" />
-            </button> */}
+            <a className="inline-flex text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:text-white! dark:border-gray-600 dark:hover:bg-gray-700! dark:hover:border-gray-600 cursor-pointer dark:text-white w-full mx-auto justify-center md:justify-start md:w-auto animate-pingOnce" href="#contacto">Contáctame</a>
           </div>
         </div>
-        <div className="w-full order-1 md:order-2 md:flex md:justify-end">
+        <div className="w-full order-1 md:order-2 md:flex md:justify-end hidden">
           <img
             className="rounded-lg w-4/12 mx-auto md:w-xs md:mx-0 animate-fadeInOnce"
+            width="auto"
+            height="auto"
             src={profile.avatar}
             alt="foto de perfil"
           />
