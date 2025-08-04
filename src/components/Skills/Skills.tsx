@@ -18,9 +18,9 @@ const Skills: React.FC<SkillsProps> = ({ data }) => {
             key={i}
             className="border border-black dark:border-white rounded-lg p-6 shadow-md"
           >
-            <h3 className="text-xl font-semibold mb-4 text-left">
+            <h2 className="text-xl font-semibold mb-4 text-left">
               {group.title}
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-left">
               {group.technologies.map((technology, index) => (
                 <span key={index} className="text-base">
