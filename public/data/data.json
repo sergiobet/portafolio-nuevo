@@ -137,7 +137,9 @@
         "macOS",
         "Postman",
         "Webpack",
-        "Vite"
+        "Vite",
+        "Apache Subversion",
+        "RequireJS"
       ]
     },
     {
