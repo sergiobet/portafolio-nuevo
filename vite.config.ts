@@ -9,4 +9,6 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  base: '/portafolio-nuevo/',
+  mode: 'production',
 })
