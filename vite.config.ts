@@ -9,5 +9,6 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: 'https://sergiobet.github.io/portafolio-nuevo'
+  base: '/portafolio-nuevo/',
+  mode: 'production',
 })

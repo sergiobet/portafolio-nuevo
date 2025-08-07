@@ -11,7 +11,7 @@
         "Sass",
         "SEO"
       ],
-      "image": "./../images/projects/htmlcenter-2.webp",
+      "image": "./images/projects/htmlcenter-2.webp",
       "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
     },
     "project2": {
@@ -26,7 +26,7 @@
         "PHP",
         "SEO"
       ],
-      "image": "./../images/projects/mp-2.webp",
+      "image": "./images/projects/mp-2.webp",
       "url": "https://web.multiphone.net/"
     },
     "project3": {
@@ -42,14 +42,14 @@
         "CSS",
         "webpack"
       ],
-      "image": "./../images/projects/sgcv-2.webp",
+      "image": "./images/projects/sgcv-2.webp",
       "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
     },
     "project4": {
       "title": "Calculadora básica",
       "description": "Calculadora básica que permite realizar operaciones matemáticas simples como suma, resta, multiplicación y división.",
       "technologies": ["Bootstrap", "React", "CSS", "JavaScript"],
-      "image": "./../images/projects/calculadora-2.webp",
+      "image": "./images/projects/calculadora-2.webp",
       "url": "https://calculadora-five-virid.vercel.app/"
     },
     "project5": {
@@ -63,7 +63,7 @@
         "CSS",
         "Web Design"
       ],
-      "image": "./../images/projects/opbcg-2.webp",
+      "image": "./images/projects/opbcg-2.webp",
       "url": "https://www.opbcapitalgroup.com/"
     },
     "project6": {
@@ -77,7 +77,7 @@
         "CSS",
         "OpenTable"
       ],
-      "image": "./../images/projects/107-2.webp",
+      "image": "./images/projects/107-2.webp",
       "url": "https://www.opbcapitalgroup.com/"
     },
     "project7": {
@@ -92,7 +92,7 @@
         "EmailJS",
         "Fetch API"
       ],
-      "image": "./../images/projects/portafolio.webp",
+      "image": "./images/projects/portafolio.webp",
       "url": "https://www.opbcapitalgroup.com/"
     }
   },
@@ -100,7 +100,7 @@
     "name": "Sergio",
     "lastName": "Betancourt",
     "email": "sbetancourt776@gmail.com",
-    "avatar": "./../images/avatar/avatar-2.webp",
+    "avatar": "./images/avatar/avatar-2.webp",
     "experience": "Desarrollador Web Full-Stack",
     "description": "Con más de 6 años de experiencia y conocimientos en el área de backend y frontend"
   },

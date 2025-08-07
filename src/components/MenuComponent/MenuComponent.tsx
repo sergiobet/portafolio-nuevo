@@ -95,7 +95,7 @@ const MenuComponent = () =>{
           <div className="flex flex-1 items-center justify-around sm:items-stretch md:justify-between">
             <div className="flex shrink-0 items-center text-2xl relative">
                 <img
-                src={darkMode ? "/logos/logo-white.webp" : "/logos/logo-dark.webp"}
+                src={darkMode ? "./logos/logo-white.webp" : "./logos/logo-dark.webp"}
                 width={30}
                 height={30}
                 loading="lazy"
