@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@layer utilities {
+  .animate-pingOnce {
+    animation: ping 0.5s ease-in-out 1;
+  }
+  .animate-fadeInOnce {
+    animation: fade 0.5s ease-in-out 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    background-image: url('./../public/images/BG-9.webp');
+    background-size: fill;
+    background-repeat: no-repeat;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    background-image: none;
+  }
+}
