@@ -43,7 +43,7 @@
         "webpack"
       ],
       "image": "./images/projects/sgcv-2.webp",
-      "url": "#"
+      "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
     },
     "project4": {
       "title": "Calculadora básica",
@@ -93,7 +93,7 @@
         "Fetch API"
       ],
       "image": "./images/projects/portafolio.webp",
-      "url": "https://sergiobet.github.io/portafolio-nuevo/"
+      "url": "https://www.opbcapitalgroup.com/"
     }
   },
   "profile": {
@@ -102,7 +102,7 @@
     "email": "sbetancourt776@gmail.com",
     "avatar": "./images/avatar/avatar-2.webp",
     "experience": "Desarrollador Web Full-Stack",
-    "description": "Con más de 6 años de experiencia y conocimientos en el área de backend y frontend"
+    "description": "Con más de 8 años de experiencia y conocimientos en el área de backend y frontend"
   },
   "skills": [
     {
