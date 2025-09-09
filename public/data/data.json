@@ -100,7 +100,7 @@
     "name": "Sergio",
     "lastName": "Betancourt",
     "email": "sbetancourt776@gmail.com",
-    "avatar": "./images/avatar/avatar-2.webp",
+    "avatar": "./images/avatar/avatar-4.webp",
     "experience": "Desarrollador Web Full-Stack",
     "description": "Con más de 8 años de experiencia y conocimientos en el área de backend y frontend"
   },
@@ -124,7 +124,7 @@
     },
     {
       "title": "Desarrollo Backend",
-      "technologies": ["Laravel", "PHP", "Dompdf", "Pusher"]
+      "technologies": ["Laravel", "PHP", "Dompdf", "Pusher", "REST API"]
     },
     {
       "title": "DevOps y Herramientas",
