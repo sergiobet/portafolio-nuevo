@@ -25,7 +25,7 @@ const Projects = ({ data }: { data: PortfolioData | null }) => {
 
                   <div className={styles.card__content}>
                     <p className={styles.card__title}>{projects.title}</p>
-                    <p className={`${styles.card__description} text-center`}>
+                    <p className={`${styles.card__description} text-justify`}>
                       {projects.description}
                     </p>
                     <br />
