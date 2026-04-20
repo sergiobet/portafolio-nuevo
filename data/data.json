@@ -30,8 +30,8 @@
       "url": "https://web.multiphone.net/"
     },
     "project3": {
-      "title": "SGCV (Proyecto local)",
-      "description": "Sistema de gestión de compras y venta de productos, permite a los usuarios llevar un control de sus compras y ventas de manera sencilla y rápida, con funcionalidades como la gestión de inventario, pedidos y facturación.",
+      "title": "SGCV",
+      "description": "Sistema de gestión de compras y venta de productos, permite a los usuarios llevar un control de sus compras y ventas de manera sencilla y rápida, con funcionalidades como la gestión de inventario, pedidos y facturación. (Proyecto desplegado en servidor local)",
       "technologies": [
         "Bootstrap",
         "Vue.js",
@@ -43,7 +43,7 @@
         "webpack"
       ],
       "image": "./images/projects/sgcv-2.webp",
-      "url": "https://sportsdf.datafactory.la/html/v3/minapp/init/index.html?channel=deportes.futbol.mundial.605138&lang=es_LA"
+      "url": "#"
     },
     "project4": {
       "title": "Calculadora básica",
@@ -83,7 +83,7 @@
         "OpenTable"
       ],
       "image": "./images/projects/107-2.webp",
-      "url": "https://www.opbcapitalgroup.com/"
+      "url": "https://www.107steakandbar.com/"
     },
     "project7": {
       "title": "Portafolio Personal",
@@ -98,7 +98,7 @@
         "Fetch API"
       ],
       "image": "./images/projects/portfolio.webp",
-      "url": "https://www.opbcapitalgroup.com/"
+      "url": "https://sergiobet.github.io/portafolio-nuevo/"
     },
     "project8": {
       "title": "Restful API de Estudiantes",
